@@ -1,0 +1,21 @@
+Protocol Audit Report
+=====================
+
+Phase 1: DNS Investigation
+--------------------------
+Original Issue: google.com was redirected to 127.0.0.1 via /etc/hosts
+Fix Applied: Removed malicious entry from /etc/hosts
+Verified DNS Resolution: google.com resolves to 142.251.41.174
+
+Phase 2: Hidden Service Discovery
+--------------------------------
+Listening Services Identified via ss -tuln:
+- Service found on port 8080 (LISTEN state)
+- Hidden Service Details:
+  * Port: 8080
+  * Server: nginx/1.24.0 (Ubuntu)
+  * Status: Active and accessible
+
+Phase 3: Audit Complete
+-----------------------
+All deception layer artifacts identified and documented.
