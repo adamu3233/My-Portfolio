@@ -1,0 +1,4 @@
+Mar 18 10:02:10 server-alpha sshd[1235]: Failed password for root from 10.0.0.55
+Mar 18 10:02:15 server-alpha sshd[1235]: Failed password for root from 10.0.0.55
+Mar 18 10:04:44 server-alpha sshd[1237]: Failed password for invalid user guest from 172.16.0.5
+Mar 18 10:05:12 server-alpha sshd[1238]: Failed password for root from 10.0.0.55
