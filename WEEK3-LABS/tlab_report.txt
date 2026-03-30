@@ -1,0 +1,21 @@
+ 
+--- TASK 1: SUBNET REMEDIATION ---
+default via 192.168.10.1 dev enp0s3 
+167.206.13.180 via 192.168.1.1 dev enp0s3 proto dhcp src 192.168.1.67 metric 100 
+167.206.13.181 via 192.168.1.1 dev enp0s3 proto dhcp src 192.168.1.67 metric 100 
+192.168.1.0/24 dev enp0s3 proto kernel scope link src 192.168.1.67 metric 100 
+192.168.1.1 dev enp0s3 proto dhcp scope link src 192.168.1.67 metric 100 
+192.168.10.0/24 dev enp0s3 proto kernel scope link src 192.168.10.150 
+--- TASK 2: DNS REMEDIATION ---
+Malicious /etc/hosts entry for secure.titancorp.com removed.
+grep titancorp returned no result - local poisoning cleared.
+--- TASK 3: TCP 3-WAY HANDSHAKE EVIDENCE ---
+tcpdump: verbose output suppressed, use -v[v]... for full protocol decode
+listening on enp0s3, link-type EN10MB (Ethernet), snapshot length 262144 bytes
+03:22:16.852430 ARP, Request who-has 192.168.10.193 tell 192.168.10.150, length 28
+03:22:17.894127 ARP, Request who-has 192.168.10.193 tell 192.168.10.150, length 28
+03:22:18.918320 ARP, Request who-has 192.168.10.193 tell 192.168.10.150, length 28
+
+3 packets captured
+3 packets received by filter
+0 packets dropped by kernel
