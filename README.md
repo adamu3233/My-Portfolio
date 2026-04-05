@@ -185,7 +185,7 @@ $ ls -la /skills
 ║  Duration : Multi-session active defense scenario    ║
 ║  Deliverable: After-Action Report (AAR)              ║
 ║                                                      ║
-║  Mission  : Detect · Contain · Respond · Document   ║
+║  Mission  : Detect · Contain · Respond · Document    ║
 ╚══════════════════════════════════════════════════════╝
 ```
 
@@ -264,7 +264,7 @@ $ ls -la /skills
 
 ```
 ╔══════════════════════════════════════════════════════════════╗
-║                   ⚡ OPERATION TITAN ⚡                       ║
+║                   ⚡ OPERATION TITAN ⚡                     ║
 ║                                                              ║
 ║  Format     : Team-based, full-scope cyber scenario          ║
 ║  Duration   : Multi-day simulation + executive debrief       ║
@@ -292,9 +292,9 @@ $ ls -la /skills
 │ Operating System │ Linux (Ubuntu / Debian)              │ System Administrator      │
 │ Automation       │ Python 3.x · Bash · YAML             │ Software Developer        │
 │ Defense          │ Wireshark · Suricata · Autopsy       │ Vulnerability Analyst     │
-│ Cloud            │ AWS (IAM · EC2 · S3 · VPC · EKS)    │ Cloud Security Specialist │
+│ Cloud            │ AWS (IAM · EC2 · S3 · VPC · EKS)     │ Cloud Security Specialist │
 │ Engineering      │ Terraform · GitHub Actions           │ Systems Architect         │
-│ Security Frameworks │ NIST CSF 2.0 · CIS Benchmarks   │ Security Control Assessor │
+│ Security         │  NIST CSF 2.0 · CIS Benchmarks       │ Security Control Assessor │
 └──────────────────┴──────────────────────────────────────┴───────────────────────────┘
 ```
 
