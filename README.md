@@ -1,4 +1,4 @@
-[README.md](https://github.com/user-attachments/files/26490240/README.md)
+
 <!-- ============================================================ -->
 <!--           KNOWLEDGE HOUSE · IF 2026 CYBERSECURITY            -->
 <!-- ============================================================ -->
