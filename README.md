@@ -22,7 +22,7 @@
 
 ![Status](https://img.shields.io/badge/STATUS-ACTIVE-00ff41?style=for-the-badge&labelColor=0d1117&logo=statuspage)
 ![Program](https://img.shields.io/badge/PROGRAM-24_WEEKS-0080ff?style=for-the-badge&labelColor=0d1117)
-![Phase](https://img.shields.io/badge/TRACK-SecOps_|_Cloud_|_DevSecOps-ff6b35?style=for-the-badge&labelColor=0d1117)
+![Phase](https://img.shields.io/badge/TRACK-CyberSecurity_|_SecOps_|_Cloud_|_DevSecOps-ff6b35?style=for-the-badge&labelColor=0d1117)
 ![Institution](https://img.shields.io/badge/THE_KNOWLEDGE_HOUSE-Fellow-8b5cf6?style=for-the-badge&labelColor=0d1117)
 
 <br/>
