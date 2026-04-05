@@ -98,7 +98,7 @@ $ ls -la /skills
 │  ● DFIR             │  ● AI/LLM Security                            │
 │  ● IDS/EDR          │  ● GRC & Risk Quantification                  │
 │                     │                                               │
-│  🏁 CAPSTONE:       │  🏁 CAPSTONE:                                 │
+│  🏁 CAPSTONE:       │  🏁 CAPSTONE:                                |
 │  Range Simulation   │  Operation Titan                              │
 └─────────────────────┴───────────────────────────────────────────────┘
 ```
