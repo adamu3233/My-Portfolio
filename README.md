@@ -44,7 +44,7 @@
 
 ```bash
 $ whoami
-  → Knowledge House Cybersecurity Fellow · IF 2026 Cohort
+  → Mohammed Adamu , Knowledge House Cybersecurity Fellow · IF 2026 Cohort
 
 $ cat mission.txt
   → Transition into high-impact roles in Security Operations,
