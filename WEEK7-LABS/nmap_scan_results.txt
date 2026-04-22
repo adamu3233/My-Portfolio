@@ -1,0 +1,52 @@
+ 
+SESSION 20: NETWORK ENUMERATION MAP
+Target Subnet: 172.99.0.0/24
+==================================================
+HOST 1 (172.99.0.5)
+* Open Ports: 80/tcp
+* Service/Version: http — nginx 1.29.8
+ 
+HOST 2 (172.99.0.6)
+* Open Ports: None — host unreachable
+* Service/Version: N/A —
+ confirmed offline via sudo nmap -sV -p- -Pn 172.99.0.6 (0 hosts up). 
+ Initial ping sweep showed no response; -Pn bypass confirmed host does not exist or was not provisioned on this subnet.
+ 
+HOST 3 (172.99.0.7)
+* Open Ports: 80/tcp
+* Service/Version: http — Apache httpd 2.4.66 (Unix)
+ 
+QUESTIONS:
+1. What Nmap flag did you use to find the specific software versions running on these ports?
+Answer: The -sV flag was used to enable version detection. 
+This flag causes Nmap to probe each open port and read the service banner to
+identify the exact software name and version running — for example, 
+distinguishing nginx 1.29.8 from Apache httpd 2.4.66 rather than simply reporting the port as "http open."
+ 
+2. Why is it dangerous to run an intense scan (like -A) on a fragile legacy system?
+Answer: The -A flag runs aggressive scanning — combining OS detection, version scanning, 
+script scanning, and traceroute simultaneously. 
+This floods the target with a high volume of probe packets in a short period. 
+On a fragile legacy system, this can crash services, exhaust memory
+, or cause the host to become unresponsive entirely, since older
+ systems were not designed to handle that volume of unexpected inbound connection attempts. 
+It can also trigger IDS/IPS alerts and cause unintended downtime on production systems
+ — which is why intense scans should only be used in isolated lab environments or with explicit written authorization.
+ 
+======================================================================================================================================
+Mission Debrief — S20: Mapping the Shadows
+
+Ping Sweep — We started with nmap -sn across all 256 addresses to find which hosts were actually alive 
+before touching any ports. Think of it as checking which lights are on before knocking on doors.
+Version Scans (-sV) — Once we had live hosts, we fingerprinted their services. Instead of just
+"something on port 80," we got exact software versions: nginx 1.29.8 on .5, Apache 2.4.66 on .7.
+
+The .6 Problem — It appeared dead because it was dropping ping probes. We re-ran with -Pn to force a scan anyway — 
+still nothing. Host was never provisioned. We documented it honestly rather than fabricating a result.
+Aggressive Scan on .7 (-A) — Stacked OS detection, scripting, and traceroute on top of version scanning
+. Confirmed Linux kernel, revealed the TRACE HTTP method was enabled (a real misconfiguration),
+ and showed the host was 1 hop away on the same segment.
+
+Bottom line: In under 20 minutes we mapped an unknown subnet from scratch
+— live hosts, software versions, OS details, and a live vulnerability
+— using only built-in Nmap flags. This is exactly what an attacker does in the first half hour on a new network.
