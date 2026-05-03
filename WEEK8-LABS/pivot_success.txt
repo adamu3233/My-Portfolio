@@ -1,0 +1,8 @@
+Starting Nmap 7.94SVN ( https://nmap.org ) at 2026-05-03 17:47 UTC
+Nmap scan report for 10.0.9.50
+Host is up (0.00090s latency).
+
+PORT     STATE SERVICE
+6379/tcp open  redis
+
+Nmap done: 1 IP address (1 host up) scanned in 0.09 seconds
