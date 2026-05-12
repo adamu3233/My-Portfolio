@@ -1,0 +1,19 @@
+==================================================
+SESSION 26: CLIENT-SIDE ATTACK PAYLOADS
+==================================================
+
+1. REFLECTED XSS
+* Payload Used: <script>alert('XSS')</script>
+* Concept: Why does this attack disappear when you refresh the page?
+Answer: It dissapears because what I entered was meant to be just an alert. Its a script woth contents saying "XSS"
+
+2. STORED XSS (Cookie Theft)
+* Cookie Value Stolen:session_id=admin_secret_99812_do_not_share
+* Payload Used: <script>alert(document.cookie)</script>
+
+3. CROSS-SITE REQUEST FORGERY (CSRF)
+* Malicious URL Crafted: http://192.168.1.67:8081/transfer?to=Attacker&amount=5000
+* Concept: What is the primary defense against CSRF?
+Answer: The primary defense against CSRF is anti-CSRF 
+tokens — unique, secret values embedded in forms that the server validates on every state-changing request, ensuring the request originated from a
+legitimate page rather than a forged one.
